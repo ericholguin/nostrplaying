@@ -95,7 +95,7 @@ func main() {
 			playerState.ShuffleState = !playerState.ShuffleState
 			err = client.Shuffle(ctx, playerState.ShuffleState)
 		case "nowplaying":
-			getCurrentlyPlaying(client, ctx)
+			getCurrentlyPlaying(client)
 		}
 		if err != nil {
 			log.Print(err)
